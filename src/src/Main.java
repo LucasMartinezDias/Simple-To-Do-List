@@ -16,7 +16,7 @@ public class Main {
         System.out.print("Digite a nova tarefa: ");
         String task = scanner.nextLine();
         tasks.add(task);
-        System.out.println("Tarefa adicionada com sucesso!\n");
+        System.out.println("Tarefa adicionada!\n");
     }
 
     // Método para remover uma tarefa
@@ -24,10 +24,10 @@ public class Main {
         listTasks();
         System.out.print("Digite o número da tarefa que deseja remover: ");
         int taskIndex = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer
+        scanner.nextLine();
         if (taskIndex > 0 && taskIndex <= tasks.size()) {
             tasks.remove(taskIndex - 1);
-            System.out.println("Tarefa removida com sucesso!\n");
+            System.out.println("Tarefa removida!\n");
         } else {
             System.out.println("Número inválido!\n");
         }
@@ -48,7 +48,7 @@ public class Main {
 
     // Método para mostrar o menu de opções
     public void showMenu() {
-        System.out.println("===== TO-DO LIST =====");
+        System.out.println("===== TO DO LIST =====");
         System.out.println("1. Adicionar tarefa");
         System.out.println("2. Remover tarefa");
         System.out.println("3. Listar tarefas");
@@ -63,7 +63,7 @@ public class Main {
         do {
             showMenu();
             option = scanner.nextInt();
-            scanner.nextLine(); // Limpar o buffer após ler o número
+            scanner.nextLine();
             switch (option) {
                 case 1:
                     addTask();
